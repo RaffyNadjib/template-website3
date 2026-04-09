@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MART-X | One Stop Shopping Solution</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Keranjang Saya</h3>
+            <i class="fas fa-times close-cart" id="close-cart"></i>
+        </div>
+        <div class="cart-items" id="cart-items-list">
+            <p class="empty-msg">Keranjang masih kosong.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="cart-total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn">Checkout Sekarang</button>
+        </div>
+    </div>
+
+    <header>
+        <div class="announcement-bar">Diskon Pembukaan! Gunakan Kode: <strong>MARTX2026</strong></div>
+        <nav class="main-nav">
+            <div class="logo">MART<span>X</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Cari produk, merek, atau kategori...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-icons">
+                <div class="icon-item" id="open-cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cart-badge">0</span>
+                </div>
+                <div class="icon-item"><i class="far fa-heart"></i></div>
+                <div class="icon-item"><i class="far fa-user"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <aside class="filter-sidebar">
+            <h3>Kategori</h3>
+            <ul class="filter-links">
+                <li><input type="checkbox" checked> Semua Produk</li>
+                <li><input type="checkbox"> Elektronik</li>
+                <li><input type="checkbox"> Perabotan</li>
+                <li><input type="checkbox"> Aksesoris</li>
+            </ul>
+
+            <div class="price-filter">
+                <h3>Range Harga</h3>
+                <input type="range" min="0" max="1000000" step="50000">
+                <div class="price-label">
+                    <span>Rp 0</span>
+                    <span>Rp 1jt+</span>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="sort-bar">
+                <p>Menampilkan <span id="product-count">3</span> Produk</p>
+                <select>
+                    <option>Terbaru</option>
+                    <option>Harga Terendah</option>
+                    <option>Harga Tertinggi</option>
+                </select>
+            </div>
+
+            <div class="product-grid">
+                <div class="item-card">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Product">
+                        <span class="tag sale">Sale</span>
+                    </div>
+                    <div class="item-info">
+                        <small>Aksesoris</small>
+                        <h4>Premium Smartwatch v4</h4>
+                        <p class="item-price" data-price="2500000">Rp 2.500.000</p>
+                        <button class="btn-add-cart">Tambah Ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Product">
+                    </div>
+                    <div class="item-info">
+                        <small>Elektronik</small>
+                        <h4>Studio Headphones Hi-Fi</h4>
+                        <p class="item-price" data-price="1200000">Rp 1.200.000</p>
+                        <button class="btn-add-cart">Tambah Ke Keranjang</button>
+                    </div>
+                </div>
+
+                <div class="item-card">
+                    <div class="item-img">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=400&q=80" alt="Product">
+                    </div>
+                    <div class="item-info">
+                        <small>Fashion</small>
+                        <h4>Sport Running Shoes Red</h4>
+                        <p class="item-price" data-price="850000">Rp 850.000</p>
+                        <button class="btn-add-cart">Tambah Ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
